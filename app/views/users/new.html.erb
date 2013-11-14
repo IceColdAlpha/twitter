@@ -1,0 +1,15 @@
+<h1>Welcome to Twitter Sign up below!!!</h1>
+
+<%= simple_form_for @user do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :email %>
+  <%= f.input :username %>
+  <%= f.input :bio %>
+  <%= f.input :password %>
+  <%= f.input :password_confirmation, label: "Enter Password Again Please" %>
+  
+
+  <br>
+  <%= f.submit "Signup", class: "btn btn-primary" %>
+<% end %>
