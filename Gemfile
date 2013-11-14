@@ -44,6 +44,6 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'simple_form'
-gem 'better_errors'
-gem 'binding_of_caller'
+#gem 'better_errors'
+#gem 'binding_of_caller'
 gem 'bootstrap-sass', '>= 3.0.0.0'
