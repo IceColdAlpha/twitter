@@ -6,15 +6,12 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
 		if @user.save
-			redirect_to "https:/www.google.com"
+			redirect_to tweets_path
 		else
 			render "new"
 		end
 	end
-	def destroy
-		session[:user_id] = nil
-		redirect_to root_url
-	end
+
 	
 	private
 	

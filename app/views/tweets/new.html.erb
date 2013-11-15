@@ -1,0 +1,7 @@
+<h1>Create New Tweet</h1>
+
+<%= simple_form_for @tweet do |f| %>
+  <%= f.input :body %>
+  <br>
+  <%= f.submit "Tweet" %>
+<% end %>

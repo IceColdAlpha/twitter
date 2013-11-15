@@ -1,0 +1,10 @@
+<h1>Index of all tweets</h1>
+
+<ul>
+<%= @tweets.each do |tweet| %>
+<li>
+	<%= tweet.body %> &nbsp &nbsp &nbsp
+	<%= time_ago_in_words tweet.created_at %> ago
+</li>
+<% end %>
+</ul>
