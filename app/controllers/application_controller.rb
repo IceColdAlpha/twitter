@@ -7,5 +7,15 @@ class ApplicationController < ActionController::Base
   	@current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
+  def follower_count
+  	@follower_count = Follower.where(:follower => session[:user_id]).count
+  end
+
+  def following_count
+    @following_count = Follower.where(:following => session[:user_id]).count 
+  end
+
   helper_method :current_user
+  helper_method :follower_count
+  helper_method :following_count
 end

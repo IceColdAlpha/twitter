@@ -1,5 +1,11 @@
 <h1>Master Home Page</h1>
+
 <% @tweets.each do |tweet| %>
-<%= tweet.user.first_name %> tweeted <%= tweet.body %> <%= time_ago_in_words tweet.created_at %> ago <br>
+<%= tweet.user.first_name %> tweeted <%= tweet.body %> <%= time_ago_in_words tweet.created_at %> ago
 <%= link_to "Favorite", favorites_path(:tweet_id => tweet[:id], :tweet_id => session[:user_id]), method: :post%>
+<%= link_to "Follow", followers_path(:stalked => tweet.user[:id], :stalker => session[:user_id]), method: :post%><br>
 <% end %> 
+<br>
+
+<%= link_to "Your tweets", tweets_path(session[:user_id]) %>
+

@@ -1,4 +1,6 @@
 Twitter::Application.routes.draw do
+  resources :followers
+
   resources :favorites
 
   resources :tweets

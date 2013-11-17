@@ -1,0 +1,6 @@
+<h1>Show for Tweets the logged in USer Follows</h1>
+
+<% @i_follow_tweets.each do |t| %>
+	<%= t.user.first_name %> tweeted <%= t.body %> <%= time_ago_in_words t.created_at %> ago <br>
+<% end %>
+

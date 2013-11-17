@@ -1,4 +1,10 @@
-<h1>Index of all tweets</h1>
+<h1>Index of all your tweets</h1>
+
+<h2>
+tweets <%= @tweets.count %>
+<br> followers  <%= @follower_count %>
+<br> following <%= @following_count %>
+</h2>
 
 <ul>
 <% @tweets.each do |tweet| %>
@@ -8,3 +14,5 @@
 	
 <% end %>
 </ul>
+<br>
+<%= link_to "Add tweet", new_tweet_path %>
