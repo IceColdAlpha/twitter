@@ -17,6 +17,11 @@
 <% end %>	
 
 <%= yield %>
+<br>
+<br>
+<% if current_user %>
+   <%= link_to "The people you follow", tweet_path(current_user[:id]) %>
+<% end %>
 
 </body>
 </html>
